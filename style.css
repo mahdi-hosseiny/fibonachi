@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Inter&family=Lexend+Deca&display=swap");
+@media (max-width: 700px) {
+  ::-moz-placeholder {
+    font-size: 14px;
+  }
+  :-ms-input-placeholder {
+    font-size: 14px;
+  }
+  ::placeholder {
+    font-size: 14px;
+  }
+}
+body {
+  background-color: #013D4F;
+  font-family: "Big Shoulders Display";
+  margin: 0%;
+  padding: 0%;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+}
+
+header {
+  background-image: url(images/header3.jpg);
+  background-attachment: scroll;
+  background-position: top;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 13rem;
+  margin-top: 0%;
+}
+header .title {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 50vw;
+  margin: auto;
+}
+
+.details {
+  color: white;
+  font-size: 25px;
+  margin-top: 20px;
+  text-align: center;
+}
+.details a {
+  color: aqua;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.form-details {
+  display: flex;
+  flex-direction: column;
+}
+.form-details .Entrance-number {
+  border-radius: 20px;
+  margin-bottom: 1rem;
+  height: 5vh;
+  font-size: 25px;
+  text-align: center;
+  background-color: #035773;
+  outline: none;
+  border: none;
+  color: white;
+}
+.form-details .submit {
+  width: 20vw;
+  height: 5vh;
+  margin: auto;
+  font-size: 25px;
+  border-radius: 20px;
+  color: white;
+  background-color: #1691b7;
+  font-weight: 900;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: none;
+}
+.form-details .submit.show {
+  display: block;
+}
+
+.input-ansewr {
+  background-color: azure;
+  margin-top: 2rem;
+  border-radius: 20px;
+  background-image: url(images/answer.jpg.webp);
+  color: white;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  font-weight: 900;
+  display: none;
+}
+.input-ansewr .main {
+  font-size: 30px;
+}
+@media (max-width: 700px) {
+  .input-ansewr .main {
+    font-size: 20px;
+  }
+}
+.input-ansewr .sub {
+  font-size: 20px;
+  opacity: 0.7;
+}
+@media (max-width: 700px) {
+  .input-ansewr .sub {
+    font-size: 10px;
+  }
+}
+.input-ansewr .next {
+  font-size: 20px;
+  opacity: 0.7;
+}
+@media (max-width: 700px) {
+  .input-ansewr .next {
+    font-size: 10px;
+  }
+}
+.input-ansewr.show-ansewr {
+  transition: 2s;
+  display: block;
+  height: 15vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+@media (max-width: 700px) {
+  .input-ansewr {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+footer {
+  background-color: #035773;
+  color: white;
+  text-align: center;
+  margin-top: auto;
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Inter&family=Lexend+Deca&display=swap');
+$background-color:#013D4F;
+$background-button-color:#1691b7;
+$font-color:white;
+$background-input-color:#035773;
+$font-size-title:35px;
+$font-size-details:25px;
+@media  (max-width: 700px) {
+::placeholder {
+    font-size: 14px;
+}
+}
+@mixin inputs { 
+    border-radius:20px ;
+    margin-bottom: 1rem;
+    height:5vh;
+    font-size: $font-size-details;
+    text-align: center;
+    background-color: $background-input-color;
+    outline: none;
+    border: none;
+    color: white;
+}
+@mixin header-background {
+    background-image: url(images/header3.jpg);
+    background-attachment: scroll;
+    background-position: top;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    
+}
+@mixin button {
+    width: 20vw;
+    height:5vh;
+    margin: auto;
+    font-size: $font-size-details;
+    border-radius: 20px;
+    color: $font-color;
+    background-color: $background-button-color;
+    font-weight: 900;
+    border: none;
+    outline: none;
+    
+}
+
+body{
+    background-color: $background-color;
+    font-family: 'Big Shoulders Display';
+    margin: 0%;
+    padding: 0%;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+}
+header{
+    @include header-background();
+    height: 13rem;
+    margin-top: 0%;
+    .title{
+        color: $font-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: $font-size-title;
+        
+    }
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 50vw;
+    margin: auto;
+}
+.details{
+    color: $font-color;
+    font-size: $font-size-details;
+    margin-top: 20px;
+    text-align: center;
+    a{
+        color: aqua;
+    }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.form-details{
+    display: flex;
+    flex-direction: column;
+    .Entrance-number{
+        @include inputs();
+    }
+    .submit{
+        @include button();
+        cursor: pointer;
+        display: none;
+        &.show {
+            display: block;
+        }
+    }
+
+}
+.input-ansewr{
+    background-color: azure;
+    margin-top: 2rem;
+    border-radius: 20px;
+    background-image: url(images/answer.jpg.webp);
+    color: $font-color;
+    margin-bottom: 2rem;
+    overflow:hidden;
+    font-weight:900;
+    
+    .main{
+        font-size: 30px;
+        @media  (max-width: 700px) {
+            font-size: 20px;
+        }
+    }
+    .sub{
+        font-size: 20px;
+        opacity: 0.7;
+        
+        @media  (max-width: 700px) {
+            font-size: 10px;
+        }
+    }
+    .next{
+        font-size: 20px;
+        opacity: 0.7;
+        
+        @media  (max-width: 700px) {
+            font-size: 10px;
+        }
+    }
+    display: none;
+    &.show-ansewr {
+        transition: 2s;
+        display: block;
+        height: 15vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    @media  (max-width: 700px) {
+        display: flex;
+        justify-content: space-around;
+ 
+    }
+
+}
+footer{
+    background-color: $background-input-color;
+    color: $font-color;
+    text-align: center;
+    margin-top: auto;
+    width: 100%;
+}
